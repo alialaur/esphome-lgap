@@ -78,10 +78,10 @@ namespace esphome
           climate::CLIMATE_FAN_HIGH,
       });
 
-      traits.set_supported_swing_modes({
+      /*traits.set_supported_swing_modes({
           climate::CLIMATE_SWING_OFF,
           climate::CLIMATE_SWING_VERTICAL,
-      });
+      });*/
 
       // todo: validate these min/max numbers
       traits.set_visual_min_temperature(MIN_TEMPERATURE);

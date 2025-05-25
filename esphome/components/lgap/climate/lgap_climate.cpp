@@ -157,15 +157,15 @@ namespace esphome
           }
           else if (fan_mode == climate::CLIMATE_FAN_LOW)
           {
-            this->fan_speed_ = 0;
+            this->fan_speed_ = 1;
           }
           else if (fan_mode == climate::CLIMATE_FAN_MEDIUM)
           {
-            this->fan_speed_ = 1;
+            this->fan_speed_ = 2;
           }
           else if (fan_mode == climate::CLIMATE_FAN_HIGH)
           {
-            this->fan_speed_ = 2;
+            this->fan_speed_ = 3;
           }
 
           // publish state
@@ -325,15 +325,15 @@ namespace esphome
       uint8_t fan_speed = ((message[6] >> 4) & 7);
       if (fan_speed != this->fan_speed_)
       {
-        if (fan_speed == 0)
+        if (fan_speed == 1)
         {
           this->fan_mode = climate::CLIMATE_FAN_LOW;
         }
-        else if (fan_speed == 1)
+        else if (fan_speed == 2)
         {
           this->fan_mode = climate::CLIMATE_FAN_MEDIUM;
         }
-        else if (fan_speed == 2)
+        else if (fan_speed == 3)
         {
           this->fan_mode = climate::CLIMATE_FAN_HIGH;
         }

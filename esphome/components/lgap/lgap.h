@@ -50,7 +50,7 @@ namespace esphome
         int last_zone_checked_index_{-1};
 
         uint16_t loop_wait_time_{500};
-        uint16_t receive_wait_time_{500};
+        uint16_t receive_wait_time_{3000};
 
         // used for keeping track of req/resp pairs
         uint8_t last_request_id_{250};

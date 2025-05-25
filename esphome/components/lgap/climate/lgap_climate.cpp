@@ -10,8 +10,8 @@ namespace esphome
   {
 
     static const char *const TAG = "lgap.climate";
-    static const uint8_t MIN_TEMPERATURE = 16;
-    static const uint8_t MAX_TEMPERATURE = 36;
+    static const uint8_t MIN_TEMPERATURE = 15;
+    static const uint8_t MAX_TEMPERATURE = 30;
 
     void LGAPHVACClimate::dump_config()
     {

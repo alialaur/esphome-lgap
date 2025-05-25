@@ -349,6 +349,7 @@ namespace esphome
 
       // target temp
       int target_temperature = (message[7] & 0xf) + 15;
+      ESP_LOGD(TAG, "Target temperature: %d", target_temperature);
       if (target_temperature != this->target_temperature_)
       {
         this->target_temperature_ = target_temperature;
@@ -366,7 +367,7 @@ namespace esphome
       {
         if (this->temperature_last_publish_time_ + this->temperature_publish_time_ <= millis())
         {
-          ESP_LOGD(TAG, "Temperature update time has lapsed. Sending update...");
+          //ESP_LOGD(TAG, "Temperature update time has lapsed. Sending update...");
           this->temperature_last_publish_time_ = millis();
           this->current_temperature_ = current_temperature;
           this->current_temperature = current_temperature;

@@ -370,7 +370,7 @@ namespace esphome
           this->current_temperature = current_temperature;
           publish_update = true;
         } else {
-          ESP_LOGD(TAG, "Temperature update time hasn't lapsed. Ignoring temperature difference...");
+          //ESP_LOGD(TAG, "Temperature update time hasn't lapsed. Ignoring temperature difference...");
         }
       }
 

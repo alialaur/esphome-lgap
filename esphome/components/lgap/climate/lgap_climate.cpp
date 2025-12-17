@@ -58,7 +58,7 @@ namespace esphome
     esphome::climate::ClimateTraits LGAPHVACClimate::traits()
     {
       auto traits = climate::ClimateTraits();
-      traits.add_feature_flags(ClimateTraits::CLIMATE_SUPPORTS_CURRENT_TEMPERATURE);
+      traits.add_feature_flags(climate::CLIMATE_SUPPORTS_CURRENT_TEMPERATURE);
 
       traits.set_supported_modes({
           climate::CLIMATE_MODE_OFF,
